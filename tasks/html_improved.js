@@ -19,6 +19,9 @@ module.exports = function (grunt) {
         var options = this.options({});
 
         var defaultVars = options.defaultVars;
+        if(typeof defaultVars === 'function'){
+            defaultVars = defaultVars();
+        }
 
 
         if (this.files.length < 1) {

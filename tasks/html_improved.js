@@ -15,21 +15,10 @@ module.exports = function (grunt) {
     var chalk = require('chalk');
     var htmlImproved = require('html-improved');
 
-    var sampleCOnfig = {
-        development: {
-            options: {
-                // permite definir as variáveis padrão
-                defaultVars: {}
-            },
-            files: {
-                '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/less/main.less'
-            }
-        }
-    };
-
     grunt.registerMultiTask('htmlImproved', 'Compile HTML improvements', function () {
         var options = this.options({});
 
+        var defaultVars = options.defaultVars;
 
 
         if (this.files.length < 1) {
@@ -57,7 +46,7 @@ module.exports = function (grunt) {
             files.forEach(function (filepath) {
                 var compiled;
                 try {
-                    compiled = htmlImproved(filepath, grunt.file.read);
+                    compiled = htmlImproved(filepath, grunt.file.read, defaultVars);
                     grunt.file.write(f.dest, compiled);
                     grunt.verbose.writeln('File ' + chalk.cyan(f.dest) + ' created.');
                 } catch (e) {

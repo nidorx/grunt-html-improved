@@ -1,0 +1,54 @@
+{
+    "name": "grunt-html-improved",
+    "version": "0.0.1",
+    "description": "Grunt plugin for html-improved",
+    "homepage": "https://github.com/nidorx/grunt-html-improved",
+    "author": {
+        "name": "Alex Rodin",
+        "email": "contato@alexrodin.info",
+        "url": "http://www.alexrodin.info/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/nidorx/grunt-html-improved.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nidorx/grunt-html-improved/issues"
+    },
+    "licenses": [
+        {
+            "type": "GPL2",
+            "url": "https://github.com/nidorx/grunt-html-improved/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "chalk": "^1.0.0",
+        "grunt-html-improved": "0.0.x"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-cli": "^0.1.13",
+        "grunt-contrib-clean": "^0.6.0",
+        "grunt-contrib-internal": "^0.4.6",
+        "grunt-contrib-jshint": "^0.11.0",
+        "grunt-contrib-nodeunit": "^0.4.1"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "peerDependencies": {
+        "grunt": ">=0.4.0"
+    },
+    "keywords": [
+        "gruntplugin",
+        "jade",
+        "hmtl",
+        "template",
+        "extends",
+        "include"
+    ],
+    "files": [
+        "tasks",
+        "LICENSE"
+    ]
+}

@@ -1,2 +1,3 @@
 # grunt-html-improved
-Adds improvements to html templates
+
+Grunt plugin for [html-improved](https://github.com/nidorx/html-improved)

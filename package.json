@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "html-improved": "0.0.x"
+    "html-improved": "0.1.x"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

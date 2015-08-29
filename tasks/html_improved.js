@@ -10,6 +10,8 @@
 
 'use strict';
 
+var path = require('path');
+
 
 module.exports = function (grunt) {
     var chalk = require('chalk');
@@ -27,6 +29,8 @@ module.exports = function (grunt) {
         if (this.files.length < 1) {
             grunt.verbose.warn('Destination not written because no source files were provided.');
         }
+
+        var cwd = process.cwd();
 
         this.files.forEach(function (f) {
             var files = f.src.filter(function (filepath) {
@@ -46,7 +50,9 @@ module.exports = function (grunt) {
                 return;
             }
 
-            files.forEach(function (filepath) {
+            files.map(function(filePath){
+                return path.join(cwd, filePath);
+            }).forEach(function (filepath) {
                 var compiled;
                 try {
                     compiled = htmlImproved(filepath, grunt.file.read, defaultVars);

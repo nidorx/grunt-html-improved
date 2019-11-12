@@ -12,7 +12,6 @@
 
 var path = require('path');
 
-
 module.exports = function (grunt) {
     var chalk = require('chalk');
     var htmlImproved = require('html-improved');
@@ -21,7 +20,7 @@ module.exports = function (grunt) {
         var options = this.options({});
 
         var defaultVars = options.defaultVars;
-        if(typeof defaultVars === 'function'){
+        if (typeof defaultVars === 'function') {
             defaultVars = defaultVars();
         }
 
@@ -50,7 +49,7 @@ module.exports = function (grunt) {
                 return;
             }
 
-            files.map(function(filePath){
+            files.map(function (filePath) {
                 return path.join(cwd, filePath);
             }).forEach(function (filepath) {
                 var compiled;
